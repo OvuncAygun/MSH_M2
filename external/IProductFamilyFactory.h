@@ -15,6 +15,6 @@ public:
 
     virtual std::vector<IDevice*> createDevices(std::vector<std::string> name,
         std::vector<std::vector<std::string>> config) = 0;
-    virtual std::vector<IDevice*> cloneDevice(std::vector<IDevice*> sources) = 0;
+    virtual std::vector<IDevice*> cloneDevices(std::vector<IDevice*> sources) = 0;
 
 };
