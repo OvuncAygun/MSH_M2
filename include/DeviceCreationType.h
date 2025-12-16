@@ -1,6 +1,6 @@
 #pragma once
 
-enum DeviceType {
+enum DeviceCreationType {
     DEVICE_LIGHT,
     DEVICE_TV,
     DEVICE_MUSIC,
