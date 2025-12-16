@@ -8,4 +8,7 @@ public:
     ~MSH_M2();
 
     IDeviceManager* getIDeviceManager();
+
+private:
+    IDeviceManager* deviceManager;
 };

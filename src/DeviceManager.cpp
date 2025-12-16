@@ -18,7 +18,7 @@ void DeviceManager::setCreator(IDeviceCreator* creator) {
 }
 
 void DeviceManager::addDevice(
-    DeviceType deviceType,
+    DeviceCreationType deviceCreationType,
     const std::string& name,
     const std::vector<std::string>& config,
     int count
@@ -27,7 +27,7 @@ void DeviceManager::addDevice(
         return;
 
     DeviceRequest request;
-    request.deviceType = deviceType;
+    request.deviceCreationType = deviceCreationType;
     request.name = name;
     request.config = config;
     request.count = count;

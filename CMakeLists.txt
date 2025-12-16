@@ -18,6 +18,15 @@ target_include_directories(MSH_M2
 target_sources(MSH_M2
     PRIVATE
         src/MSH_M2.cpp
+        src/DeviceManager.cpp
+
+        src/BaseDeviceCreator.cpp
+        src/AlarmCreator.cpp
+        src/CameraCreator.cpp
+        src/LightCreator.cpp
+        src/DetectorCreator.cpp
+        src/MusicCreator.cpp
+        src/TVCreator.cpp
     
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include/MSH_M2.h

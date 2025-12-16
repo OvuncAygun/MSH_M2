@@ -1,18 +1,21 @@
 #include "AlarmCreator.h"
 
 DeviceRequest AlarmCreator::createDevice(DeviceRequest request) {
-    if (request.deviceType == DEVICE_ALARM && deviceFactory) {
-        for (int i = 0; i < request.count; ++i) {
-            IDevice* device = deviceFactory->createDevice(
+    if (request.deviceCreationType == DEVICE_ALARM && deviceFactory) {
+        IDevice* device;
+        if (request.count > 0) {
+            device = deviceFactory->createDevice(
                 request.name,
                 request.config
             );
-            if (device) {
-                request.deviceVector.push_back(device);
-            }
+            request.deviceVector.push_back(device);
+        }
+
+        for (int i = 1; i < request.count; ++i) {
+            device = deviceFactory->cloneDevice(device);
+            request.deviceVector.push_back(device);
         }
         return request;
     }
-
-    return BaseDeviceCreator::createDevice(request);
+    return IDeviceCreator::createDevice(request);
 }

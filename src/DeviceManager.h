@@ -6,6 +6,7 @@
 #include "IDeviceManager.h"
 #include "IDeviceCreator.h"
 #include "DeviceRequest.h"
+#include "IDevice.h"
 
 class DeviceManager : public IDeviceManager {
 private:
@@ -19,7 +20,7 @@ public:
     void setCreator(IDeviceCreator* creator);
 
     virtual void addDevice(
-        DeviceType deviceType,
+        DeviceCreationType deviceCreationType,
         const std::string& name,
         const std::vector<std::string>& config,
         int count
