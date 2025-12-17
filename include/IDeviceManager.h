@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include "DeviceType.h"
+#include "DeviceCreationType.h"
 #include "IDevice.h"
 
 class IDeviceManager {
@@ -10,7 +11,7 @@ public:
     virtual ~IDeviceManager() {}
 
     virtual void addDevice(
-        DeviceType deviceType,
+        DeviceCreationType deviceCreationType,
         const std::string& name,
         const std::vector<std::string>& config,
         int count
