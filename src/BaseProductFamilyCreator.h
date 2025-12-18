@@ -16,6 +16,6 @@ public:
     virtual void setNext(IDeviceCreator* next);
     virtual void setFactory(IProductFamilyFactory* factory);
 
-    // Chain of Responsibility entry
-    virtual DeviceRequest createDevice(DeviceRequest request);
+    virtual DeviceRequest createDevice(DeviceRequest request) override;
+
 };
