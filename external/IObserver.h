@@ -4,7 +4,7 @@
 
 class IObserver {
 public:
-    virtual ~IObserver() = 0;
+    virtual ~IObserver() {}
 
     virtual void update(IDevice* device) = 0;
 };

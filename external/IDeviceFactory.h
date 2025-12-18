@@ -8,7 +8,7 @@
 
 class IDeviceFactory {
 public:
-    virtual ~IDeviceFactory() = 0;
+    virtual ~IDeviceFactory() = default;
 
     virtual IObserver* getObserver() = 0;
     virtual void setObserver(IObserver* observer) = 0;

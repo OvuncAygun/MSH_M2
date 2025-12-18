@@ -8,7 +8,7 @@
 
 class IProductFamilyFactory {
 public:
-    virtual ~IProductFamilyFactory() = 0;
+    virtual ~IProductFamilyFactory() = default;
 
     virtual IObserver* getObserver() = 0;
     virtual void setObserver(IObserver* observer) = 0;
