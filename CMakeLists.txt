@@ -32,6 +32,8 @@ target_sources(MSH_M2
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include/MSH_M2.h
         ${CMAKE_CURRENT_SOURCE_DIR}/include/IDeviceManager.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/IDeviceCreator.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/DeviceCreationType.h
 )
 
 include(CTest)
