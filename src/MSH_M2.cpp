@@ -7,7 +7,6 @@
 #include "TVCreator.h"
 #include "DeviceManager.h"
 
-
 MSH_M2::MSH_M2() {
     
 };
@@ -40,17 +39,18 @@ void MSH_M2::initializeCreatorChain() {
     DetectorCreator* detectorCreator = new DetectorCreator();
     detectorCreator->setFactory(productFamilyFactories[0]);
 
-    deviceCreatorChain = alarmCreator;
+    IDeviceCreator* deviceCreatorChain = alarmCreator;
     alarmCreator->setNext(cameraCreator);
     cameraCreator->setNext(lightCreator);
     lightCreator->setNext(musicCreator);
     musicCreator->setNext(tvCreator);
     tvCreator->setNext(detectorCreator);
+
+    static_cast<DeviceManager*>(deviceManager)->setCreator(deviceCreatorChain);
 }
 
 void MSH_M2::initializeDeviceManager() {
     deviceManager = new DeviceManager();
-    static_cast<DeviceManager*>(deviceManager)->setCreator(deviceCreatorChain);
 }
 
 IDeviceManager* MSH_M2::getDeviceManager() {

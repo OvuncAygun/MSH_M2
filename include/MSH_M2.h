@@ -3,7 +3,6 @@
 #include "IDeviceManager.h"
 #include "IDeviceFactory.h"
 #include "IProductFamilyFactory.h"
-#include "IDeviceCreator.h"
 
 class MSH_M2 {
 public:
@@ -22,5 +21,4 @@ private:
     IDeviceManager* deviceManager;
     std::vector<IDeviceFactory*> deviceFactories;
     std::vector<IProductFamilyFactory*> productFamilyFactories;
-    IDeviceCreator* deviceCreatorChain;
 };
