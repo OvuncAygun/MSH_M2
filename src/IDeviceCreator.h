@@ -7,6 +7,9 @@ class IDeviceCreator {
 public:
     virtual ~IDeviceCreator() {}
 
-    virtual void setNext(IDeviceCreator* next) = 0;
+    void setNext(IDeviceCreator* next);
     virtual DeviceRequest createDevice(DeviceRequest request) = 0;
+
+protected:
+    IDeviceCreator* nextCreator;
 };

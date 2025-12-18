@@ -20,6 +20,7 @@ target_sources(MSH_M2
         src/MSH_M2.cpp
         src/DeviceManager.cpp
 
+        src/IDeviceCreator.cpp
         src/BaseDeviceCreator.cpp
         src/AlarmCreator.cpp
         src/CameraCreator.cpp
