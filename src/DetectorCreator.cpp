@@ -8,12 +8,16 @@ DeviceRequest DetectorCreator::createDevice(DeviceRequest request) {
                 std::vector<std::string>{request.name, request.name},
                 std::vector<std::vector<std::string>>{request.config, request.config}
             );
+            devices[0]->setIndex(index++);
+            devices[1]->setIndex(index++);
             request.deviceVector.push_back(devices[0]);
             request.deviceVector.push_back(devices[1]);
         }
 
         for (int i = 1; i < request.count; ++i) {
             std::vector<IDevice*> devices = productFamilyFactory->cloneDevices(devices);
+            devices[0]->setIndex(index++);
+            devices[1]->setIndex(index++);
             request.deviceVector.push_back(devices[0]);
             request.deviceVector.push_back(devices[1]);
         }

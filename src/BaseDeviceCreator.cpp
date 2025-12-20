@@ -1,7 +1,7 @@
 #include "BaseDeviceCreator.h"
 
 BaseDeviceCreator::BaseDeviceCreator()
-    : nextCreator(0), deviceFactory(0) {
+    : nextCreator(0), deviceFactory(0), index(0) {
 }
 
 BaseDeviceCreator::~BaseDeviceCreator() {

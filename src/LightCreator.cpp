@@ -8,11 +8,13 @@ DeviceRequest LightCreator::createDevice(DeviceRequest request) {
                 request.name,
                 request.config
             );
+            device->setIndex(index++);
             request.deviceVector.push_back(device);
         }
 
         for (int i = 1; i < request.count; ++i) {
             device = deviceFactory->cloneDevice(device);
+            device->setIndex(index++);
             request.deviceVector.push_back(device);
         }
         return request;
