@@ -3,7 +3,7 @@
 DeviceRequest CameraCreator::createDevice(DeviceRequest request) {
     if (request.deviceCreationType == DEVICE_CAMERA && deviceFactory) {
         IDevice* device;
-        if (request.count == 1) {
+        if (request.count > 1) {
             device = deviceFactory->createDevice(
                 request.name,
                 request.config
