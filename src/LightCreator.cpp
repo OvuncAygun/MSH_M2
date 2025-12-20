@@ -19,5 +19,6 @@ DeviceRequest LightCreator::createDevice(DeviceRequest request) {
         }
         return request;
     }
-    return IDeviceCreator::createDevice(request);
+    
+    return nextCreator->createDevice(request);
 }

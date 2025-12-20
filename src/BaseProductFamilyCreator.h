@@ -6,7 +6,6 @@
 
 class BaseProductFamilyCreator : public IDeviceCreator {
 protected:
-    IDeviceCreator* nextCreator;
     IProductFamilyFactory* productFamilyFactory;
     int index;
 

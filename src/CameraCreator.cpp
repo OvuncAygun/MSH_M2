@@ -19,5 +19,6 @@ DeviceRequest CameraCreator::createDevice(DeviceRequest request) {
         }
         return request;
     }
-    return BaseDeviceCreator::createDevice(request);
+    
+    return nextCreator->createDevice(request);
 }

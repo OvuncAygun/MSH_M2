@@ -6,7 +6,6 @@
 
 class BaseDeviceCreator : public IDeviceCreator {
 protected:
-    IDeviceCreator* nextCreator;
     IDeviceFactory* deviceFactory;
     int index;
 

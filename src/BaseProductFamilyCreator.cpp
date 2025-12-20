@@ -1,7 +1,8 @@
 #include "BaseProductFamilyCreator.h"
 
 BaseProductFamilyCreator::BaseProductFamilyCreator()
-    : nextCreator(0), productFamilyFactory(0), index(0) {
+    : productFamilyFactory(0), index(0) {
+    nextCreator = 0;
 }
 
 BaseProductFamilyCreator::~BaseProductFamilyCreator() {
